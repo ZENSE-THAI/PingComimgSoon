@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+:root {
+
+/* ### Primary */
+
+--Blue: hsl(223, 87%, 63%);
+--light-blue: hsla(223,87%,63%,.8);
+--white :#fefefe;
+
+/* ### Secondary */
+
+--Pale-Blue: hsl(223, 100%, 88%);
+--Light-Red: hsl(354, 100%, 66%);
+
+/* ### Neutral */
+
+--Gray: hsl(0, 0%, 59%);
+--Very-Dark-Blue: hsl(209, 33%, 12%);
+
+
+--fs-h:1.25rem;
+
+
+
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo {
+    margin: 4rem 0 1.5rem 0;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+    color: var(--Gray);
+    font-weight: 300;
+    transition: all .3s ease;
+}
+
+h1 span {
+    font-weight: 700;
+    color: var(--Very-Dark-Blue);
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--Very-Dark-Blue);
+    transition: all .3s ease;
+}
+
+form {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-block: 3rem .5rem;
+    gap: 1rem;
+}
+
+form input,
+form button {
+    height: 45px;
+    width: 100%;
+    border-radius: 50px;
+    outline: none;
+}
+
+form input {
+    padding-left: 2.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--Pale-Blue);
+}
+
+form input::placeholder {
+    font-size: 1rem;
+    color: var(--Pale-Blue);
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+form input:focus{
+    border: 2px solid var(--Blue);
+}
+
+form.error input{
+    border: 2px solid var(--Light-Red);
+}
+
+form label {
+    font-size: 80%;
+    color: var(--Light-Red);
+    display: none;
+}
+
+form.error label {
+    display: block;
+}
+
+form button {
+    border: none;
+    background: var(--Blue);
+    color: var(--white);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px 5px var(--Pale-Blue);
+    transition: all .3s ease;
+}
+
+form button:hover,
+form button:focus{
+    background: var(--light-blue);
+}
+
+
+.socials{
+    width: 100%;
+   padding-block: 5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.socials a {
+    text-decoration: none;
+    color: var(--Blue);
+    border: 1px solid var(--Pale-Blue);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+}
+
+.socials a:hover,
+.socials a:focus{
+    background: var(--Blue);
+    color: var(--white);
+}
+
+.since {
+    font-size: .775rem;
+    color: var(--Gray);
+}
+
+
+@media only screen and (min-width:700px) {
+    
+    .logo {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: var(--fs-h);
+    }
+
+    form {
+        flex-direction: row;
+        width: 650px;
+        height: 100px;
+        margin: 1rem 0 1rem 0;
+        position: relative;
+    }
+
+    form input {
+        width: 70%;
+    }
+    form button {
+        width: 30%;
+    }
+
+    form label {
+        position: absolute;
+        top: 80px;
+        left: 30px;
+    }
+
+    .socials a {
+        width: 50px;
+        height: 50px;
+    }
+
+    .since {
+        font-size: .9rem;
+    }
+
+}
